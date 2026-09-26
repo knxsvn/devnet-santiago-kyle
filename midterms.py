@@ -38,29 +38,24 @@ def remove_pet(pet_list):
 def main():
     running = True
     while running:
-        choice = display_menu()
-        break;
-        # use if/elif to call the right function based on choice
-        # set running = False when the user picks Exit      
-main()    
-
-try:
-    choice = input(" ")
+       # use if/elif to call the right function based on choice
+              # set running = False when the user picks Exit     
+display_menu()
+    try: 
+    
+    choice = int(input("Choose a number: "))
     if  input == 1:
-        print(f"You chose: {choice} ""Add pet")
-        break;
+        add_pet(pets)
     elif input == 2:
-        print(f"You chose: {choice} View All pets")
-        break;
+        view_pets(view_pets)
     elif input == 3:
-        print(f"You chose: {choice} Count Available vs Adaopted")
-        break;
+        count_available_adopted(count_available_adopted)
     elif input == 4:
-        print(f"You chose: {choice} Find pet by name")
-        break;
+        find_pet(find_pet)
     else: 
         print(f"You chose: {choice} Exit.")    
-        break;
-
-except ValueError:
-   print("Enter a valid number")
+        
+    except ValueError:
+         print("Enter a valid number")
+    
+main()    
