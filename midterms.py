@@ -1,20 +1,21 @@
-pets = [" "]  # starts empty — the user adds pets as the program runs
+pets = ["jumbo rat "]  # starts empty — the user adds pets as the program runs
 
 def display_menu():
     # print the menu, return the user's choice
-    print("=== Pet Adoption Records ===")
-    choice = input("Choose One")
     print("1. Add Pet")
     print("2. View all Pets")
     print("3. Count available vs adopted")
     print("4. Find a pet by name")
     print("5. Exit")
-
-print(f"You chose: {choice}")
-
+    print("Choose a number: ")
+    
 def add_pet(pet_list):
     # ask for name, animal type, status — build the string, add to the list
-    pass
+    name = input("Enter your pets name:")
+    print(f"Hello {name}")
+    type = input("What is your pets type?: ")
+    status = input("What is your pets status?: ")
+    print(f"Hello1{name}I see that you're a {type} with a{status} status")
 
 def view_pets(pet_list):
     # loop through and print every pet — handle empty list
@@ -42,4 +43,24 @@ def main():
         # use if/elif to call the right function based on choice
         # set running = False when the user picks Exit      
 main()    
-       
+
+try:
+    choice = input(" ")
+    if  input == 1:
+        print(f"You chose: {choice} ""Add pet")
+        break;
+    elif input == 2:
+        print(f"You chose: {choice} View All pets")
+        break;
+    elif input == 3:
+        print(f"You chose: {choice} Count Available vs Adaopted")
+        break;
+    elif input == 4:
+        print(f"You chose: {choice} Find pet by name")
+        break;
+    else: 
+        print(f"You chose: {choice} Exit.")    
+        break;
+
+except ValueError:
+   print("Enter a valid number")
