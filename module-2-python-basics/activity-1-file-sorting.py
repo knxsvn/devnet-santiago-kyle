@@ -1,27 +1,25 @@
-"""
-Module 2 — Activity: File Sorting with os and shutil
-Student: [Santiago Kyle]
-Date: [9/27/26]
 
-============================================
-WHAT DID YOU BUILD?
-============================================
-I build a filesorting script that organizes files in a specified source folder into subfolders based on their file types. 
-The script checks the file extensions and moves image files to an "Images" folder, document files to a "Documents" folder, 
-and any other files to an "Others" folder.
-
-============================================
-KEY VOCABULARY
-============================================
-- os module: Is a Python module used for interacting with the operating system, such as working with files, folders, and file paths.
-- shutil module: Is a Python module used for high-level file operations, such as copying and moving files.
-- file path: The location of a file in the file system.
-- directory: A folder in the file system used to organize files.
+#Module 2 — Activity: File Sorting with os and shutil
+#Student: [Santiago Kyle]
+#Date: [9/27/26]
 
 
-============================================
-YOUR SCRIPT
-============================================
+#WHAT DID YOU BUILD?
+
+#I build a filesorting script that organizes files in a specified source folder into subfolders based on their file types. 
+#The script checks the file extensions and moves image files to an "Images" folder, document files to a "Documents" folder, 
+#and any other files to an "Others" folder.
+
+
+#KEY VOCABULARY
+
+# os module: Is a Python module used for interacting with the operating system, such as working with files, folders, and file paths.
+# shutil module: Is a Python module used for high-level file operations, such as copying and moving files.
+# file path: The location of a file in the file system.
+# directory: A folder in the file system used to organize files.
+
+
+
 import os
 import shutil
 #Folders containing different file types
@@ -60,19 +58,13 @@ for filename in os.listdir(source_folder):
 print("Files have been sorted successfully!")
 
 
-============================================
-A MISTAKE I MADE (or one I want to avoid)
-============================================
-One mistake I needed to avoid was using a folder path that did not exist. 
-If the source folder cannot be found, the script will not work correctly. 
-I used os.makedirs() with exist_ok=True to make sure the destination folders are created automatically when they do not already exist.
+#A MISTAKE I MADE (or one I want to avoid)
 
-Another thing to avoid is accidentally moving folders instead of files, which is why the script checks os.path.isdir() and skips directories.
+#One mistake I needed to avoid was using a folder path that did not exist. 
+#If the source folder cannot be found, the script will not work correctly. 
+#I used os.makedirs() with exist_ok=True to make sure the destination folders are created automatically when they do not already exist.
 
-============================================
-HOW THIS CONNECTS TO SOMETHING ELSE
-============================================
-[optional: how is this similar to what real automation scripts do?
-think about your own gradebook/attendance workflow — could something
-like this save you time there?]
-"""
+#Another thing to avoid is accidentally moving folders instead of files, which is why the script checks os.path.isdir() and skips directories.
+
+
+
